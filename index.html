@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Scheme Switcher</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: space-around;
+            padding: 5vmax;
+        }
+        .button{
+            width: 100px;
+            height: 100px;
+            border: solid black 2px;
+        }
+        #grey {
+        background: grey;
+        }
+
+        #white {
+        background: white;
+        }
+        #blue {
+        background: blue;
+        }
+        #yellow {
+        background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Color Scheme Switcher</h1>
+    <div class="container">
+        <div class="button" id="grey"> </div>
+        <div class="button" id="white"> </div>
+        <div class="button" id="blue"> </div>
+        <div class="button" id="yellow"> </div>
+    </div>
+    <h2 align="center">Try clicking on one of the colors above
+        to change the background color of this page!</h2>
+    <script>
+        function greyColor(){
+            const body = document.querySelector('body');
+            body.style.backgroundColor = 'grey'; 
+        }
+        const boxGrey = document.getElementById('grey');
+        boxGrey.addEventListener('click', greyColor);
+
+        function whiteColor(){
+            const body = document.querySelector('body');
+            body.style.backgroundColor = 'white'; 
+        }
+        const boxWhite = document.getElementById('white');
+        boxWhite.addEventListener('click', whiteColor);
+
+        function blueColor(){
+            const body = document.querySelector('body');
+            body.style.backgroundColor = 'blue'; 
+        }
+        const boxBlue = document.getElementById('blue');
+        boxBlue.addEventListener('click', blueColor);
+
+        function yellowColor(){
+            const body = document.querySelector('body');
+            body.style.backgroundColor = 'yellow'; 
+        }
+        const boxYellow = document.getElementById('yellow');
+        boxYellow.addEventListener('click', yellowColor);
+    </script>
+</body>
+</html>
